@@ -1,0 +1,1 @@
+It checks boundary conditions and whether the current cell is water or has already been visited. If any of these conditions are true, it returns without further exploration.
