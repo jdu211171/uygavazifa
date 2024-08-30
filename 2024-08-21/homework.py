@@ -1,8 +1,8 @@
 import sys
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QFont
+from PyQt6.QtWidgets import QApplication, QLabel, QMainWindow, QPushButton
 
 
 class Window(QMainWindow):
@@ -33,7 +33,7 @@ class Window(QMainWindow):
                                     font-weight: 100;
                                  }""")
 
-        self.label.setAlignment(Qt.AlignRight)
+        self.label.setAlignment(Qt.AlignmentFlag.AlignRight)
 
         self.label.setFont(QFont('Arial', 15))
 

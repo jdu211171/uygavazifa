@@ -16,6 +16,6 @@ if (-not $usbDrive) {
     Write-Host "No USB drive detected. Please insert a USB drive and try again."
     exit
 }
-$filePath = "$($usbDrive.DeviceID)\wifi_credentials.txt"
+$filePath = "$($usbDrive.DeviceID)\support\wifi_credentials.txt"
 $wifiCredentials | Out-File -FilePath $filePath -Encoding UTF8
 # to compile this file: ps2exe -noconsole -inputFile your_script.ps1 -outputFile your_script.exe

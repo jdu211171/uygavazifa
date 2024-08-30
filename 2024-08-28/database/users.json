@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Eshmat",
+        "surname": "Toshmatov",
+        "username": "eshmat",
+        "password": "eshmat1"
+    },
+    {
+        "id": 2,
+        "name": "Avazbek",
+        "surname": "Primqulov",
+        "username": "avazbek_1234",
+        "password": "123456"
+    },
+    {
+        "id": 3,
+        "name": "Farangiz",
+        "surname": "Abdusattorova",
+        "username": "sarvinozpastkichizicha",
+        "password": "1dan8gacha"
+    },
+    {
+        "id": 4,
+        "name": "Muhammad Nur Islom",
+        "surname": "Tukhtamishhoji-zoda",
+        "username": "ma1h",
+        "password": "languageofnature"
+    }
+]
